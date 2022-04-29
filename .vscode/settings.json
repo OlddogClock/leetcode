@@ -1,0 +1,9 @@
+{
+    "eslint.format.enable": true,
+    "eslint.run": "onSave",
+    "eslint.nodePath": "",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+}
