@@ -1,3 +1,12 @@
 {
-    "compileOnSave": false
+    "compilerOptions": {
+        "module": "es6",
+        "target": "es6",
+        "noImplicitAny": false,
+        "sourceMap": false,
+        "watch":true
+    },
+    "include":[
+        "./src/*.ts"
+    ]
 }

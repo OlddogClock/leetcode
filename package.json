@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tsc": "npx tsc src/%npm_config_file%.ts & node src/%npm_config_file%.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/node": "^17.0.30",
     "typescript": "^4.6.3"
   },
   "devDependencies": {

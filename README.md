@@ -1,7 +1,11 @@
 # 用typescript刷leetcode题
-Node环境运行
 
 `src/` 下直接是`题号.ts`
+
+Node下运行
+```
+npm run tsc --file=0013 // src下的题号，不带文件扩展名
+```
 
 我的环境：
 * VSCode版本: 1.66.2
