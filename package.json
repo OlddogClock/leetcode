@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx tsc src/%npm_config_file%.ts & npx tsc src/%npm_config_file%.test.ts & npx mocha src/%npm_config_file%.test.js",
-    "tsc": "npx tsc src/%npm_config_file%.ts & node src/%npm_config_file%.js"
+    "start": "npx tsc src/%npm_config_file%.ts & npx tsc src/%npm_config_file%.test.ts & npx mocha src/%npm_config_file%.test.js --slow -1",
+    "tsc": "npx tsc src/%npm_config_file%.ts & node src/%npm_config_file%.js",
+    "test": "npx tsc src/%npm_config_file%.test.ts & npx mocha src/%npm_config_file%.test.js --slow -1"
   },
   "author": "",
   "license": "ISC",

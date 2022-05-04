@@ -8,7 +8,19 @@
  * CD=500-100  CM=1000-100
  * 所以，从后向前遍历字符串s，记录最大的数字，如果当前数字比最大数字大，则相加，否则相减
  */
-export default class Solution {
+export default class RomanToInteger {
+  /**
+   * 测试用例
+   */
+  static testCase: any[][] = [
+    ['III', 3],
+    ['IV', 4],
+    ['IX', 9],
+    ['LVIII', 58],
+    ['MCMXCIV', 1994],
+    ['DI', 501],
+  ]
+
   private Map: Object = {
     I: 1,
     V: 5,
@@ -36,7 +48,3 @@ export default class Solution {
     return integer
   }
 }
-
-const a = new Solution()
-const b = a.main('I')
-console.log(b)

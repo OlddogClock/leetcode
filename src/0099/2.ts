@@ -4,9 +4,21 @@
  * 两个链表里的十进制数字相加，有进位的向后进位，每个节点上的数字都是个位数
  * 这里引入JS里实现的链表（详情看common/SinglyLinkedList），用数组也可以代替
  */
-import SinglyLinkedList from '../base/SinglyLinkedList'
+import SinglyLinkedList from '../base/singlylinkedlist'
 
-export default class Solution {
+export default class AddTwoNumbers {
+  /**
+   * 测试用例
+   * [
+   *    [l1, l2, result]
+   * ]
+   */
+  static testCase = [
+    [[2, 4, 3], [5, 6, 4], [7, 0, 8]],
+    [[0], [0], [0]],
+    [[9, 9, 9, 9, 9, 9, 9], [9, 9, 9, 9], [8, 9, 9, 9, 0, 0, 0, 1]],
+  ]
+
   /**
    * 用链表实现
    */

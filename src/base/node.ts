@@ -1,5 +1,5 @@
 /**
- * 链表
+ * 链表节点 TypeScript版
  * L = new Node(1);
  * L.next=new Node(2);
  */

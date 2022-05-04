@@ -1,5 +1,5 @@
 /**
- * JS模拟单向链表
+ * JS模拟单向链表TypeScript版
  * 从js对象上看来，所有的数据都在head中，tail只是末尾node的指针
  * 形如：
  * last = { data:2,next:null }
@@ -48,8 +48,8 @@ export default class SinglyLinkedList {
   /**
    * 将链表转为数组
    */
-  toArray() {
-    const arr = []
+  toArray():[] {
+    const arr = <any>[]
     // 从链表头部开始循环
     let me = this.head
     while (me !== null) {
