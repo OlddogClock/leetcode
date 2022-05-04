@@ -1,6 +1,6 @@
 # 用typescript刷leetcode题
 
-我的环境：
+开发环境：
 * VSCode: 1.66.2
 * Node.js: 16.13.0
 * TypeScript: 4.6.3
@@ -12,7 +12,7 @@
 `.eslintrc.js` 使用了比较严格的`airbnb-base`规则
 `mynote` 我的笔记
 
-我的步骤：
+步骤：
 
 1. 先写测试用例`题号.test.ts`，用单元测试框架`mocha`，NodeJS自带断言库`assert`
 2. 在`题号.ts`做题
