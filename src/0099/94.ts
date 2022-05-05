@@ -1,49 +1,12 @@
 /**
  * 《二叉树的中序遍历》
  * https://leetcode-cn.com/problems/binary-tree-inorder-traversal/
- * 关于二叉树的笔记： mynote/二叉树.md
+ * 笔记：https://github.com/OlddogClock/leetcode/blob/main/mynote/%E4%BA%8C%E5%8F%89%E6%A0%91.md
  */
-interface IBinaryTree{
-  data: number,
-  left?: IBinaryTree,
-  right?: IBinaryTree,
-}
+
+import { IBinaryTree } from '../util/interfaces'
 
 export default class InorderTraversal {
-  /**
-   * 测试用例
-   *
-   */
-  static testCase:any[] = [
-    [{
-      data: 1,
-      right: {
-        data: 2,
-        left: {
-          data: 3,
-        },
-      },
-    }, [1, 3, 2]],
-    [{
-      data: 1,
-      left: {
-        data: 2,
-        right: {
-          data: 5,
-        },
-      },
-      right: {
-        data: 3,
-        left: {
-          data: 6,
-        },
-        right: {
-          data: 7,
-        },
-      },
-    }, [2, 5, 1, 6, 3, 7]],
-  ]
-
   // 递归法
   static recursive(root:IBinaryTree) {
     const result = []
@@ -58,7 +21,7 @@ export default class InorderTraversal {
     return result
   }
 
-  // Morris遍历算法
+  // Morris法中序遍历
   static morris(root:IBinaryTree) {
     const result = []
 
@@ -91,6 +54,30 @@ export default class InorderTraversal {
       }
     }
 
+    return result
+  }
+
+  /**
+   * 迭代法中序遍历
+   */
+  static iteration(root:IBinaryTree) {
+    const result = []
+
+    const stack:IBinaryTree[] = []
+
+    // 当前节点或暂存栈不为空就循环
+    while (root || stack.length) {
+      // 一路向左，将节点逐一入栈
+      while (root) {
+        stack.push(root)
+        root = root.left
+      }
+      // 栈顶节点出栈，打印节点值
+      root = stack.pop()
+      result.push(root.data)
+      // 将刚出栈的节点右子树作为当前节点继续
+      root = root.right
+    }
     return result
   }
 }

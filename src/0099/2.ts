@@ -1,10 +1,10 @@
 /**
- * 《两数相加》
+ * 《2. 两数相加》
  * https://leetcode-cn.com/problems/add-two-numbers/
  * 两个链表里的十进制数字相加，有进位的向后进位，每个节点上的数字都是个位数
  * 这里引入JS里实现的链表（详情看common/SinglyLinkedList），用数组也可以代替
  */
-import SinglyLinkedList from '../base/singlylinkedlist'
+import SinglyLinkedList from '../util/singlylinkedlist'
 
 export default class AddTwoNumbers {
   /**

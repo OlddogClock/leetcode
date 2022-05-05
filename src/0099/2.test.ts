@@ -1,7 +1,7 @@
 import { it } from 'mocha'
 import * as assert from 'assert'
 import AddTwoNumbers from './2'
-import SinglyLinkedList from '../base/SinglyLinkedList'
+import SinglyLinkedList from '../util/SinglyLinkedList'
 
 describe('2. 两数相加', () => {
   const { testCase, linked, array } = AddTwoNumbers
